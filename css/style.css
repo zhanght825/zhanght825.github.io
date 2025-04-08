@@ -53,8 +53,6 @@ button:hover {
     margin-bottom: 0;
 }
 
-.catdog {
-    display: block;
-    margin: 0, auto;
-
+.catdog {   
+    float: right;
 }
