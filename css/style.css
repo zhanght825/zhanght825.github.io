@@ -30,7 +30,7 @@ h2.title {
 button {
     color: #409eff;
     padding: 5px;
-    margin: 0, auto;
+    margin: 0 auto;
     background-color: rgb(d4, d7, de);
     border-radius: 5px;
     font-size: larger;
@@ -53,6 +53,10 @@ button:hover {
     margin-bottom: 0;
 }
 
-.catdog {   
+.catdog {
     float: right;
+}
+
+.counter {
+    background-color: lightblue
 }

@@ -4,33 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./script/script.js"></script>
-    <link rel="icon" href="./assets/logo.png" type="img/png">
+    <script src="./script/script.js" defer></script>
+    <link rel="icon" href="./assets/logo.png" type="image/png">
     <title>chinese food</title>
 </head>
 
 <body>
-    <nav>
-        <div class="nav">
-            <button onclick="showMessage()">Click me</button>
-            <button onclick="checkAge()">Enter the party</button>
-            <button onclick="showMany()">Try to close</button>
-            <button onclick="changeColor()">change color</button>
-        </div>
-    </nav>
     <div>
-        <img class="catdog" id="catdog"
-            src="https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg"
-            width="300px" alt="a cat">
-        <br>
+        <button id="alertMe">
+            ALERT ME
+        </button>
 
-        <button class="changanimal" onclick="changeToDog()">change to dog</button>
-        <button class="changanimal" onclick="changeToCat()">change to cat</button>
-        <main id="main" class="title">Welcome to my repo...</main>
-        Your 2-year IT diploma is your ticket to upgrade to the BTech degree, specializing in either Software
+        <button id="hoverButton">
+            Hover Me
+        </button>
 
+        <button id="buttonCounter">
+            Increment
+        </button>
+        <p id="counter" class="counter">
+            <span id="evenOrOdd"> odd:</span> <span id="number"> 0 </span>
+        </p>
+        <div id="container">
+            <!DOCTYPE html>
+
+            <input type="text" id="letter1" placeholder="a-z" maxlength="1" pattern="a-z">
+            <input type="text" id="letter2" placeholder="a-z" maxlength="1" pattern="a-z">
+            <button onclick="printRange()">print</button>
+            <p id="container1"> The result will be printed here.</p>
+        </div>
     </div>
-
 </body>
 
 </html>
