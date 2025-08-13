@@ -1,2 +1,2 @@
 #!/bin/bash
-npm run build && cp dist/* ../docs/
+npm run build && cp -r dist/* ../docs/
