@@ -1,85 +1,58 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div>
+    <header class="site-header" role="banner">
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">D</div>
+          <span>Asks Dumpling</span>
+        </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+        <button class="burger" aria-label="Open menu" :aria-expanded="mobileOpen" @click="toggleMenu">
+          ☰
+        </button>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+        <nav class="menu" :class="{ open: mobileOpen }" aria-label="Main Navigation">
+          <RouterLink :to="{name:'Home'}" :aria-current="$route.name==='Home' ? 'page' : null">Home</RouterLink>
+          <RouterLink :to="{name:'Dumplings'}" :aria-current="$route.name==='Dumplings' ? 'page' : null">Dumplings</RouterLink>
+          <RouterLink :to="{name:'Buns'}" :aria-current="$route.name==='Buns' ? 'page' : null">Buns</RouterLink>
+          <RouterLink :to="{name:'Desserts'}" :aria-current="$route.name==='Desserts' ? 'page' : null">Desserts</RouterLink>
+          <RouterLink :to="{name:'Cart'}" :aria-current="$route.name==='Cart' ? 'page' : null">Cart</RouterLink>
+          <RouterLink :to="{name:'About'}" :aria-current="$route.name==='About' ? 'page' : null">About</RouterLink>
+          <RouterLink :to="{name:'Contact'}" :aria-current="$route.name==='Contact' ? 'page' : null">Contact</RouterLink>
+        </nav>
+      </div>
+    </header>
 
-  <RouterView />
+    <!-- Optional Weather Widget -->
+    <!-- <WeatherWidget /> -->
+
+    <main class="container">
+      <RouterView />
+    </main>
+
+    <SiteFooter />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script setup>
+import { ref } from 'vue'
+import { RouterView, RouterLink } from 'vue-router'
+import SiteFooter from './components/SiteFooter.vue'
+// import WeatherWidget from './components/WeatherWidget.vue'
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+const mobileOpen = ref(false)
+function toggleMenu() { mobileOpen.value = !mobileOpen.value }
+</script>
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+<style>
+/* 基本导航和响应式样式 */
+.site-header { background:#fff; border-bottom:1px solid #ccc; padding:10px 20px; }
+.nav { display:flex; justify-content:space-between; align-items:center; }
+.menu { display:flex; gap:15px; }
+.menu.open { display:block; }
+.burger { display:none; }
+@media (max-width:768px){
+  .menu { display:none; flex-direction:column; }
+  .burger { display:block; }
 }
 </style>
