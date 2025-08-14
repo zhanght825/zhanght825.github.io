@@ -1,6 +1,6 @@
 <template>
   <footer class="site-footer">
-    <p>&copy; 2025 Asks Dumpling. All rights reserved.</p>
+    <p>&copy; 2025 Love Within. All rights reserved.</p>
   </footer>
 </template>
 

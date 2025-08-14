@@ -21,8 +21,8 @@
 
     <section class="contact-info">
       <h3>Our Info</h3>
-      <p>Email: asksdumpling@example.com</p>
-      <p>Phone: (555) 123-4567</p>
+      <p>Email: 88888888@example.com</p>
+      <p>Phone: 888888-8888</p>
       <p>Service Area: Calgary (Takeout & Delivery Only)</p>
     </section>
   </div>

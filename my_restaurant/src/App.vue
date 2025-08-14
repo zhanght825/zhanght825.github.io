@@ -3,8 +3,8 @@
     <header class="site-header" role="banner">
       <div class="container nav">
         <div class="brand">
-          <div class="logo">D</div>
-          <span>Asks Dumpling</span>
+          <div class="logo">L</div>
+          <span>ove within</span>
         </div>
 
         <button class="burger" aria-label="Open menu" :aria-expanded="mobileOpen" @click="toggleMenu">

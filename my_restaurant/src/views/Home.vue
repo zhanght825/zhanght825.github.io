@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="hero">
-      <h1>Welcome to Asks Dumpling</h1>
+      <h1>Welcome to Love Within</h1>
       <p>Delicious dumplings, buns and desserts delivered to your door!</p>
       <router-link :to="{name:'Dumplings'}" class="btn">Order Now</router-link>
     </section>
